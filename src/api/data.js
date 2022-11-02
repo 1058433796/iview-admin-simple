@@ -13,3 +13,35 @@ export const getDragList = () => {
     method: 'get'
   })
 }
+
+export const getFieldList = (param) => {
+  return axios.request({
+    url: `/one/fieldList`,
+    method: 'get',
+    params: param
+  })
+}
+
+export const getOneDataList = (param) => {
+  return axios.request({
+    url: '/one/data',
+    method: 'get',
+    params: param,
+  })
+}
+
+export const getTwoDataList = (param) => {
+  return axios.request({
+    url: '/two/data',
+    method: 'get',
+    params: param,
+  })
+}
+
+export const getThreeDataList = (param) => {
+  return axios.request({
+    url: '/three/data',
+    method: 'get',
+    params: param,
+  })
+}

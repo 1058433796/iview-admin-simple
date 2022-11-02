@@ -47,30 +47,40 @@ export default [
           icon: 'md-home'
         },
         component: () => import('@/view/single-page/home')
-      }
-    ]
-  },
-  {
-    path: '/mul',
-    name: 'mul',
-    meta: {
-      hideInMenu: false,
-      icon: 'md-menu',
-      title: '多级菜单'
-    },
-    component: Main,
-    children: [
+      },
       {
-        path: 'level1',
-        name: 'level1',
+        path: '/one',
+        name: 'one',
         meta: {
-          icon: 'md-funnel',
-          title: '一级-1'
+          hideInMenu: false,
+          icon: 'md-menu',
+          title: '问题一'
         },
-        component: () => import('@/view/multilevel/level-2-1')
-      }
+        component: () => import("@/view/single-page/one"),
+      },
+      {
+        path: '/two',
+        name: 'two',
+        meta: {
+          hideInMenu: false,
+          icon: 'md-menu',
+          title: '问题二'
+        },
+        component: () => import("@/view/single-page/two"),
+      },
+      {
+        path: '/three',
+        name: 'three',
+        meta: {
+          hideInMenu: false,
+          icon: 'md-menu',
+          title: '问题三'
+        },
+        component: () => import("@/view/single-page/three"),
+      },
     ]
   },
+
   {
     path: '/401',
     name: 'error_401',

@@ -78,6 +78,16 @@ export default [
         },
         component: () => import("@/view/single-page/three"),
       },
+      {
+        path: '/four',
+        name: 'four',
+        meta: {
+          hideInMenu: false,
+          icon: 'md-menu',
+          title: '问题四'
+        },
+        component: () => import("@/view/single-page/four"),
+      },
     ]
   },
 

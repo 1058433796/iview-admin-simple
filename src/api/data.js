@@ -45,3 +45,19 @@ export const getThreeDataList = (param) => {
     params: param,
   })
 }
+
+export const getDistrictList = (param) => {
+  return axios.request({
+    url: '/three/districtList',
+    method: 'get',
+    params: param,
+  })
+}
+
+export const getFourDataList = (param) => {
+  return axios.request({
+    url: '/four/data',
+    method: 'get',
+    params: param,
+  })
+}

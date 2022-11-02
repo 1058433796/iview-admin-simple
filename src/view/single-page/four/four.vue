@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import {getFieldList, getThreeDataList, getDistrictList} from '@/api/data';
+import {getFieldList, getFourDataList, getDistrictList} from '@/api/data';
 
 export default {
-  name: "three",
+  name: "four",
 
   data() {
     return {
@@ -41,7 +41,10 @@ export default {
         { title: "城市", key: "city" },
         {title: "区", key: "district"},
         {title: "区域", key: "region"},
-        {title: "数量", key:"count"}
+        {title: "数量", key: "count"},
+        {title: "平均面积", key:"average"},
+        {title: "最大面积", key:"max"},
+        {title: "最小面积", key: "min"},
       ],
       data: [],
       filterForm: {},
@@ -57,11 +60,10 @@ export default {
         console.log(res);
         this.cityList = res.data;
     })
-
    },
 
    getDataList(){
-        getThreeDataList({...this.filterForm, page: this.page}).then(res =>{
+        getFourDataList({...this.filterForm, page: this.page}).then(res =>{
         console.log('getThreeDataList', res);
         this.data = res.data
     })
